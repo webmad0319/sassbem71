@@ -112,7 +112,7 @@ Example: `<div class="block block--mod">...</div>
 # SASS
 ## How to install
 
-`Npm i node-sass`
+`npm i node-sass`
 
 And then rename all files from css to scss, including all the imports in all the files.
 
@@ -167,27 +167,27 @@ Source: https://www.competa.com/blog/sass-mixins-and-functions/
 Mixins are written in Sass as @mixin and can be inserted into an element by using the @include directive. Most developers used mixins until proper functions got introduced in Sass 3.1.0. This is because it can pass in arguments, contain selections and parent references. They obtain full CSS rules where properties that are dynamic will be passed into arguments. By using arguments, it allows you a wide variety of styles and makes it easier to re-use.
 
 ```
-   @mixin border-radius($radius) {
-        -webkit-border-radius: $radius;
-           -moz-border-radius: $radius;
-            -ms-border-radius: $radius;
-                border-radius: $radius;
-    }
+@mixin border-radius($radius) {
+    -webkit-border-radius: $radius;
+        -moz-border-radius: $radius;
+        -ms-border-radius: $radius;
+            border-radius: $radius;
+}
 
-    .block { 
-        @include border-radius(2px); 
-    }
+.block { 
+    @include border-radius(2px); 
+}
 ```
 
 Will generate
 
 ```
-   .block {
-        -webkit-border-radius: 2px;
-           -moz-border-radius: 2px;
-            -ms-border-radius: 2px;
-                border-radius: 2px;
-    }
+.block {
+    -webkit-border-radius: 2px;
+        -moz-border-radius: 2px;
+        -ms-border-radius: 2px;
+            border-radius: 2px;
+}
 ```
 
 ### Functions
@@ -195,25 +195,25 @@ Will generate
 Functions are written in Sass as @function followed by a function name and arguments. Since functions work with the value of a style attribute, they are great for calculating values that you may need to re-use elsewhere. Sass has in-built functions that you can use, but if you prefer/need other functions, you can also create them yourself. In case you create them, please note that the best practice is to use short names and no camelCase or snake_case. A big pro with functions is that you can port them into other projects!
 
 ```
-   @function function-name($arg1, $arg2) {
-        @return $arg1 + $arg2
-    }
+@function function-name($arg1, $arg2) {
+    @return $arg1 + $arg2
+}
 ```
 
 Use
 
 ```
-   .element {
-        padding: function-name(20px, 15px);
-    }
+.element {
+    padding: function-name(20px, 15px);
+}
 ```
 
 Output:
 
 ```
-   .element  {
-        padding: 35px;
-    }
+.element  {
+    padding: 35px;
+}
 ```
 
 ### Extend
@@ -239,7 +239,7 @@ Output:
 }
 ```
 
-Mixing for different vendors
+Mixin for different vendors
 
 ```
 @mixin transform($value) {
