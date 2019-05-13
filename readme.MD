@@ -169,9 +169,9 @@ Mixins are written in Sass as @mixin and can be inserted into an element by usin
 ```
 @mixin border-radius($radius) {
     -webkit-border-radius: $radius;
-        -moz-border-radius: $radius;
-        -ms-border-radius: $radius;
-            border-radius: $radius;
+    -moz-border-radius: $radius;
+    -ms-border-radius: $radius;
+    border-radius: $radius;
 }
 
 .block { 
@@ -184,9 +184,9 @@ Will generate
 ```
 .block {
     -webkit-border-radius: 2px;
-        -moz-border-radius: 2px;
-        -ms-border-radius: 2px;
-            border-radius: 2px;
+    -moz-border-radius: 2px;
+    -ms-border-radius: 2px;
+    border-radius: 2px;
 }
 ```
 
