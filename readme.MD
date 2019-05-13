@@ -56,7 +56,7 @@ http://getbem.com/naming/
 
 The BEM approach ensures that everyone who participates in the development of a website works with a single codebase and speaks the same language. Using proper naming will prepare you for the changes of the design of the website.
 
-##Block
+## Block
 
 Encapsulates a standalone entity that is meaningful on its own. While blocks can be nested and interact with each other, semantically they remain equal; there is no precedence or hierarchy. Holistic entities without DOM representation (such as controllers or models) can be blocks as well.
 
@@ -64,7 +64,7 @@ Naming: Block names may consist of Latin letters, digits, and dashes. To form a 
 
 Example: `<div class="block">...</div>`
 
-##Element
+## Element
 
 Parts of a block and have no standalone meaning. Any element is semantically tied to its block.
 
@@ -75,7 +75,7 @@ Example: `Example: <div class="block">
 	  <span class="block__elem"></span>
 	</div>`
 
-##Modifier
+## Modifier
 
 Flags on blocks or elements. Use them to change appearance, behavior or state.
 
@@ -85,9 +85,9 @@ Example: `<div class="block block--mod">...</div>
 	<div class="block block--size-big
 		block--shadow-yes">...</div>`
 
-##General Example
+## General Example
 
-###HTML
+### HTML
 
 ``` 
 <form class="form form--theme-xmas form--simple">
@@ -98,7 +98,7 @@ Example: `<div class="block block--mod">...</div>
 </form>
 ```
 
-###CSS
+### CSS
 
 ```
 .form { }
@@ -109,14 +109,14 @@ Example: `<div class="block block--mod">...</div>
 .form__submit--disabled { }
 ```
 
-#SASS
-##How to install
+# SASS
+## How to install
 
 `Npm i node-sass`
 
 And then rename all files from css to scss, including all the imports in all the files.
 
-#Variables
+# Variables
 
 ```
 $direction: 'left';
@@ -125,7 +125,7 @@ $value: 42; // Yep
 $length: $value * 1px;
 ```
 
-#Calculations
+# Calculations
 
 ```
 .foo {
@@ -133,7 +133,7 @@ $length: $value * 1px;
 }
 ```
 
-#Colors
+# Colors
 
 ```
 $sass-pink: hsl(330, 50%, 60%);
@@ -141,7 +141,7 @@ $sass-pink: hsl(330, 50%, 60%);
 $main-theme-color: $sass-pink;
 ```
 
-#Mixed examples
+# Mixed examples
 
 ```
 .foo, .foo-bar,
@@ -160,7 +160,7 @@ $main-theme-color: $sass-pink;
 }
 ```
 
-###Mixins
+### Mixins
 
 Source: https://www.competa.com/blog/sass-mixins-and-functions/
 
@@ -190,7 +190,7 @@ Will generate
     }
 ```
 
-###Functions
+### Functions
 
 Functions are written in Sass as @function followed by a function name and arguments. Since functions work with the value of a style attribute, they are great for calculating values that you may need to re-use elsewhere. Sass has in-built functions that you can use, but if you prefer/need other functions, you can also create them yourself. In case you create them, please note that the best practice is to use short names and no camelCase or snake_case. A big pro with functions is that you can port them into other projects!
 
@@ -216,7 +216,7 @@ Output:
     }
 ```
 
-###Extend
+### Extend
 
 ```
 %button {
@@ -249,7 +249,7 @@ Mixing for different vendors
 }
 ```
 
-###Conditions
+### Conditions
 
 ```
 @function dummy($condition) {
@@ -261,7 +261,7 @@ Mixing for different vendors
 }
 ```
 
-###For
+### For
 
 ```
 @for $i from 1 through 10 {
